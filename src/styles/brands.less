@@ -1,0 +1,41 @@
+.brands {
+  background: #bebebe;
+}
+.brands__container {
+  margin: 0 auto;
+
+}
+.list__brands {
+  li {
+    display: inline-block;
+  }
+  .justify__ListBrands; //розтянув всі бренди по горизонталі//
+}
+.justify__ListBrands {
+  display: inline-block;
+  width: 100%;
+  text-align: justify;
+  &:after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 0;
+  }
+}
+.vertical__alignerListBrands {
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 204px;
+    vertical-align: middle;
+    width: 0;
+  }
+}
+.brands__store {
+  font-size: 0; //для того щоб забрати content: '';, його по факту немає але він може займати певну висоту.
+  .vertical__alignerListBrands; //вирівняв всі бренди по вертикалі та задав висоту блоку//
+}

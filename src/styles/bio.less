@@ -1,0 +1,75 @@
+.biographia {
+  background: #e2534b;
+}
+.container__bio {
+  margin: 0 auto;
+}
+.img__bio {
+  margin: 40px 0 50px;
+  text-align: center;
+}
+.col__bio {
+  margin-bottom: 80px;
+}
+//--settings hover--//
+.me__photo {
+    width: 35%;
+    height: auto;
+}
+.circle {
+  display: inline-block;
+  height: 240px;
+  width: 240px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  .me__photo, .avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); //вирівняв по центру
+    transition: opacity 2s; //анімація, тайм 2 сек
+  }
+  //.avatar {} якщо потрібно буде переоприділити стилі для фото //
+  .me__photo {
+    visibility: hidden; // тут аналогічно можна використати display:none(але visibility дозволяє анімувати картинку)
+    opacity: 0;
+  }
+  &:hover {
+    .me__photo {
+      visibility: visible; // тут аналогічно можна використати display:block(але visibility дозволяє анімувати картинку)
+      opacity: 1;
+    }
+    .avatar {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+.name {
+  line-height: 39px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: 'BebasNeue';
+  text-align: center;
+}
+.icon__bio {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+//right collumn//
+.tittle__abouteMe {
+  color: white;
+  font-family: 'BebasNeue';
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+.biography__story {
+  color: white;
+  font-family: 'OpenSansRegular';
+  font-size: 14px;
+  text-align: justify;
+}
