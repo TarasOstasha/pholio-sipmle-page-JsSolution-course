@@ -36,6 +36,9 @@ p {
     position: absolute;
     width: 100%;
     top: 0;
+    span {
+      color: #0f0f0f!important;
+    }
     .h1__text {
       .h1__textFont();
       margin: 50px 0 0;
@@ -120,8 +123,36 @@ p {
 
 .navbar__headerLogo {
   .vertical-aligner;
-  display: inline-block;
+  //display: inline-block;
   height: 100%;
   width: 20%;
   float: left;
+}
+.logo > img {
+  width: 185px;
+}
+
+a.back-to-top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  //background: #00ffff;
+  background: #00ffff url("../images/up.png") no-repeat center 43%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 10px;
+  opacity: 0.3;
+}
+a.back-to-top:hover {
+  background: #00cccc;
+}
+@media (max-width: 768px){
+  a.back-to-top  {
+    display: none !important;
+  }
 }
