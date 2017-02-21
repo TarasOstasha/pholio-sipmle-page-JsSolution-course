@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "masonry": "^4.1.1"
+    "masonry": "^4.1.1",
+    "bootstrap": "^3.3.7",
+    "toastr": "^2.1.2",
   }
 }

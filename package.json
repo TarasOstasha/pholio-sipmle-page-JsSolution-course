@@ -4,15 +4,15 @@
   "description": "new verstka",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "toastr": "^2.1.2"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
+   "autoprefixer": "^6.5.1",
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
     "gulp-add-src": "^0.2.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.0.3",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
