@@ -24,8 +24,8 @@ $(document).ready(function () {
     //     alert("ДЯКУЄМО ЗА ВАШУ УВАГУ НАШ САЙТ ЗНАХОДИТЬ НА СТАДІЇ РОЗРОБКИ НЕЗАБАРОМ ВІДКРИТТЯ ТОЖ WELCOME");
     // }); -- відміна
 
+    //**btn scroll up**//
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
-
     $(window).scroll(function() {
         if ( $(window).scrollTop() > 300 ) {
             $('a.back-to-top').fadeIn('slow');
@@ -41,6 +41,15 @@ $(document).ready(function () {
         return false;
     });
 
+    //**scroll menu**//
+    $('a:not(.left, .right, .back-to-top)[href^="#"]').click(function(){
+        var el = $(this).attr('href');
+        $('body').animate({
+            scrollTop: $(el).offset().top}, 2000);
+        return false;
+    });
+
+    //**submit**//
     $('#form-site').submit(function() {
         $.ajax({
             type: "GET",

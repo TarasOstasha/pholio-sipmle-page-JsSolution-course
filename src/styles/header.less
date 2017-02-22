@@ -128,8 +128,17 @@ p {
   width: 20%;
   float: left;
 }
-.logo > img {
-  width: 185px;
+//.logo > img {
+//  width: 185px;
+//}
+.logo {
+  transition: ease-out 1s;
+  &:hover {
+    text-decoration: none;
+    color: darken(#ffffff, 30%);
+
+  }
+  .logo__Fonts();
 }
 
 a.back-to-top {
