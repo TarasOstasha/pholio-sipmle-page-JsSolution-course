@@ -22,11 +22,17 @@ p {
   padding: 0;
   margin: 0;
 }
+.header {
+  position: relative;
+}
 //--header top settings--//
 .tittle__headerContainer {
   position: absolute;
-  top: 35%;
-  left: 40%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
   z-index: 1;
   text-transform: uppercase;
   opacity: .7;
@@ -36,6 +42,8 @@ p {
 .header__top {
   position: relative;
   line-height: 1;
+  display: flex;
+  position: relative;
   .tittle__header {
     position: absolute;
     width: 100%;
@@ -97,9 +105,17 @@ p {
   display: inline-block;
   height: 100%;
   .vertical-aligner;
-
   li {
     padding: 0 15px;
+    a {
+      i {
+        font-size: 30px;
+        color: #fff;
+      }
+      i:hover {
+        color: #65ba99;
+      }
+    }
   }
 }
 .nav__menu  {
@@ -134,9 +150,9 @@ p {
   width: 20%;
   float: left;
 }
-//.logo > img {
-//  width: 185px;
-//}
+.logo > img {
+  width: 60px;
+}
 .logo {
   transition: ease-out 1s;
   &:hover {

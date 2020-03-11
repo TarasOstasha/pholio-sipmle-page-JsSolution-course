@@ -61,7 +61,8 @@ gulp.task('bower-js', function() {
 	return gulp.src([
 		"src/bower/bootstrap/dist/js/bootstrap.js",
 		"src/bower/masonry/dist/masonry.pkgd.min.js",
-		"src/bower/toastr/toastr.js"
+		"src/bower/toastr/toastr.js",
+		"src/node_modules/particlesjs/dist/particles.min.js"
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))
