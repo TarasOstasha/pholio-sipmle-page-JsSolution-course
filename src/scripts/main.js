@@ -67,24 +67,35 @@ $(document).ready(function () {
         var timeSlide;
         function goToSlide() {
             var listItem = $(".slideshow li")
+            // listItem.each(function () {
+            //     var i = $(this).next();
+            //     i.length || (i = $(this).siblings(":first")),
+            //         i.children(":first-child").appendTo($(this));
+            // });
+
             listItem.each(function () {
-                var i = $(this).next();
-                i.length || (i = $(this).siblings(":first")),
-                    i.children(":first-child").appendTo($(this));
-            });
+                var next = $(this).next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').appendTo($(this));
+            })
         }
         timeSlide = setInterval(goToSlide, 2500);
         // stop slider when on hover
-        $('.slideshow').on('mouseenter', function(){
+        $('.slideshow').on('mouseenter', function () {
             // stop animation
             clearInterval(timeSlide);
-          }).on('mouseleave', function(){
+        }).on('mouseleave', function () {
             // play animation
             timeSlide = setInterval(goToSlide, 2500);
-          });
+        });
 
 
     });
+   
+      
+
 
 
     //////
