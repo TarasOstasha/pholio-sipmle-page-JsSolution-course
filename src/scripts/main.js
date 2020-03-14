@@ -1,11 +1,5 @@
-// Initialize with JavaScript
-// var masonry_gryd = document.querySelector('.grid');
-// var msnry = new Masonry(masonry_gryd, {
-//     columnWidth: 220,
-//     itemSelector: '.grid-item'
-// });
 
-//**-realize on native javascript-**//
+//**-native javascript-**//
 var btnHeader = document.querySelector('.navbar__btn');
 btnHeader.addEventListener('click', function () {
     var menu = document.querySelector('.navbar__menuHeader');
@@ -14,14 +8,6 @@ btnHeader.addEventListener('click', function () {
 });
 //**-realize on jQuery-**//
 $(document).ready(function () {
-
-    // Initialize with jQuery
-    $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-    });
-
     //**btn scroll up fade in on scroll**//
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
     $(window).scroll(function () {
@@ -90,11 +76,9 @@ $(document).ready(function () {
             // play animation
             timeSlide = setInterval(goToSlide, 2500);
         });
-
-
     });
-   
-      
+
+
 
 
 
