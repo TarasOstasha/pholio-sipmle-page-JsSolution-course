@@ -35,18 +35,24 @@ $(document).ready(function () {
         return false;
     });
 
-    //**submit**//
-    $('#form-site').submit(function () {
+    // **submit**//
+    $('#form-site').submit(function (e) {
+        e.preventDefault();
         $.ajax({
-            type: "GET",
-            url: "",
-            data: $(this).serialize()
+            //type: "GET",
+            type: "POST",
+            url: "http://localhost:8000/email",
+            data: $(this).serialize(),
         }).done(function () {
-            // alert('Thanks for your email. \n We well contact you as soon as possible');
             toastr.success('Thanks for your email. \n We will contact you as soon as possible');
             $("#form-site").get(0).reset();
-        });
+        }).fail(function() {
+            toastr.error('ERROR');
+        })
         return false;
+    });
+    $("#btnClosePopup").click(function () {
+        $("#myModal").modal("hide");
     });
     // slideshow
     $(function () {
