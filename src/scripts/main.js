@@ -35,7 +35,9 @@ $(document).ready(function () {
         return false;
     });
 
-    // **submit**//
+
+
+    // **submit form**//
     $('#form-site').submit(function (e) {
         console.log(e)
         e.preventDefault();
@@ -43,14 +45,13 @@ $(document).ready(function () {
         var name = $('[name="name"]').val();
         var phone = $('[name="phone"]').val();
         var email = $('[name="email"]').val();
-        var nameReg = /^[A-Za-z]+$/;
-        var phoneReg =  /^[0-9]+$/;
+        var nameReg = /^[a-zA-Z ]{2,30}$/;
+        var phoneReg =  /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         var nameFormat = nameReg.test(name);
         var numberFormat = phoneReg.test(phone);
         var emailFormat = emailReg.test(email);
         if( !emailFormat ) {
-            console.log(emailFormat)
             toastr.error('Please Fill Out Email'); 
             return
         }else if(!numberFormat) {
@@ -59,25 +60,26 @@ $(document).ready(function () {
         }else if(!nameFormat) {
             toastr.error('Please Fill Out Correct Name'); 
             return
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8000/email",
+                data: $(this).serialize(),
+            }).done(function () {
+                toastr.success("Thanks for your email. \n I will contact you as soon as possible", "Notification");
+                $("#form-site").get(0).reset();
+                $("#myModal").modal("hide");
+            }).fail(function () {
+                toastr.error('ERROR');
+            })
+            return false;
         }
-
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:8000/email",
-            data: $(this).serialize(),
-        }).done(function () {
-            toastr.success('Thanks for your email. \n We will contact you as soon as possible');
-            $("#form-site").get(0).reset();
-        }).fail(function () {
-            toastr.error('ERROR');
-        })
-        
-        return false;
     });
-    // close contact modal window
-    // $("#btnClosePopup").click(function () {
-    //     $("#myModal").modal("hide");
-    // });
+    //close contact modal window
+    //$("#btnClosePopup").click(function () {
+    //  $("#myModal").modal("hide");
+    //});
+
 
     // slideshow witch technology we are using
     $(function () {
