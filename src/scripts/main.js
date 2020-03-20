@@ -37,24 +37,49 @@ $(document).ready(function () {
 
     // **submit**//
     $('#form-site').submit(function (e) {
+        console.log(e)
         e.preventDefault();
+        //validation -> make a function
+        var name = $('[name="name"]').val();
+        var phone = $('[name="phone"]').val();
+        var email = $('[name="email"]').val();
+        var nameReg = /^[A-Za-z]+$/;
+        var phoneReg =  /^[0-9]+$/;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var nameFormat = nameReg.test(name);
+        var numberFormat = phoneReg.test(phone);
+        var emailFormat = emailReg.test(email);
+        if( !emailFormat ) {
+            console.log(emailFormat)
+            toastr.error('Please Fill Out Email'); 
+            return
+        }else if(!numberFormat) {
+            toastr.error('Please Fill Out Correct Phone Number'); 
+            return
+        }else if(!nameFormat) {
+            toastr.error('Please Fill Out Correct Name'); 
+            return
+        }
+
         $.ajax({
-            //type: "GET",
             type: "POST",
             url: "http://localhost:8000/email",
             data: $(this).serialize(),
         }).done(function () {
             toastr.success('Thanks for your email. \n We will contact you as soon as possible');
             $("#form-site").get(0).reset();
-        }).fail(function() {
+        }).fail(function () {
             toastr.error('ERROR');
         })
+        
         return false;
     });
-    $("#btnClosePopup").click(function () {
-        $("#myModal").modal("hide");
-    });
-    // slideshow
+    // close contact modal window
+    // $("#btnClosePopup").click(function () {
+    //     $("#myModal").modal("hide");
+    // });
+
+    // slideshow witch technology we are using
     $(function () {
         var timeSlide;
         function goToSlide() {

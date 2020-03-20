@@ -462,12 +462,12 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title h4__text" id="myModalLabel">Please leave your contacts and we
+                                <h4 class="modal-title h4__text" id="myModalLabel">Please leave your contacts and I
                                     will
                                     callback you ASAP</h4>
                             </div>
                             <div class="modal-body">
-                                <form class="form_s center-block" id="form-site">
+                                <form class="form_s center-block" id="form-site" name="contact-form">
                                     <div class="form-group">
                                         <input type="text" name="name" class="form-control inputlogin" required="required"
                                             placeholder="Name">
@@ -479,6 +479,9 @@
                                     <div class="form-group">
                                         <input type="text" name="phone" class="form-control inputlogin" required="required"
                                             placeholder="Phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="proposition" id="contact-form-textarea" class="form-control" placeholder="Leave Your Message Here" cols="30" rows="10"></textarea>
                                     </div>
                                     <button id="btnClosePopup" type="submit" class="btn btn-primary btn-block sendbtn">Send a
                                         request</button>
