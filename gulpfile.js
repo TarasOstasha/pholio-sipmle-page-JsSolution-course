@@ -28,7 +28,8 @@ gulp.task("less", function() {
 gulp.task("bower-css", function() {
 	return gulp.src([
 			"src/bower/bootstrap/dist/css/bootstrap.css",
-			"src/bower/toastr/toastr.min.css"
+			"src/bower/toastr/toastr.min.css",
+			"src/bower/owl.carousel/dist/assets/owl.carousel.min.css"
 		])
 	.pipe(sourcemaps.init()) //ініціалізація кроків
 	.pipe(nano())
@@ -62,7 +63,8 @@ gulp.task('bower-js', function() {
 		"src/bower/bootstrap/dist/js/bootstrap.js",
 		"src/bower/masonry/dist/masonry.pkgd.min.js",
 		"src/bower/toastr/toastr.js",
-		"src/node_modules/particlesjs/dist/particles.min.js"
+		"src/bower/particlesjs/dist/particles.js",
+		"src/bower/owl.carousel/dist/owl.carousel.min.js"
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))

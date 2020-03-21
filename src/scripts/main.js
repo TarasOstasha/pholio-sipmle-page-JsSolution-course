@@ -35,9 +35,51 @@ $(document).ready(function () {
         return false;
     });
 
+    // portfolio carousel
+        $('.owl-portfolio').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            dots: false,
+            responsive:{
+                0:{
+                    items: 2
+                },
+                600:{
+                    items: 6
+                },
+                1000:{
+                    items: 9
+                }
+            }
+        });
+    
+    //technology carousel 
+    $('.owl-brands').owlCarousel({
+        loop: true,
+        margin: -200,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        dots: false,
+        animateIn: true,
+        responsive:{
+            0:{
+                items: 1.5
+            },
+            600:{
+                items: 3
+            },
+            1000:{
+                items: 5
+            }
+        }
+    });
 
-
-    // **submit form**//
+  
+    // ** CONTACT FORM ** //
     $('#form-site').submit(function (e) {
         console.log(e)
         e.preventDefault();
@@ -82,34 +124,34 @@ $(document).ready(function () {
 
 
     // slideshow witch technology we are using
-    $(function () {
-        var timeSlide;
-        function goToSlide() {
-            var listItem = $(".slideshow li")
+    // $(function () {
+    //     var timeSlide;
+    //     function goToSlide() {
+    //         var listItem = $(".slideshow li")
             // listItem.each(function () {
             //     var i = $(this).next();
             //     i.length || (i = $(this).siblings(":first")),
             //         i.children(":first-child").appendTo($(this));
             // });
 
-            listItem.each(function () {
-                var next = $(this).next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-                next.children(':first-child').appendTo($(this));
-            })
-        }
-        timeSlide = setInterval(goToSlide, 2500);
+        //     listItem.each(function () {
+        //         var next = $(this).next();
+        //         if (!next.length) {
+        //             next = $(this).siblings(':first');
+        //         }
+        //         next.children(':first-child').appendTo($(this));
+        //     })
+        // }
+        // timeSlide = setInterval(goToSlide, 2500);
         // stop slider when on hover
-        $('.slideshow').on('mouseenter', function () {
+        // $('.slideshow').on('mouseenter', function () {
             // stop animation
-            clearInterval(timeSlide);
-        }).on('mouseleave', function () {
+        //     clearInterval(timeSlide);
+        // }).on('mouseleave', function () {
             // play animation
-            timeSlide = setInterval(goToSlide, 2500);
-        });
-    });
+    //         timeSlide = setInterval(goToSlide, 2500);
+    //     });
+    // });
 
 
 

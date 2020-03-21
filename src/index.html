@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <title>portpholio</title>
+    <style>
+        #toast-container {
+            z-index: 999 !important
+        }
+    </style>
 </head>
 
 <body>
@@ -119,38 +124,103 @@
             <span>This is personal page were u can find something info aboute me</span>
         </div>
         <div class="container container__portfolio">
-            <!-- MAKE SLIDER -->
-            <div class="container-portfolio">
-                <div class="card">
-                    <h3 class="title-portfolio">Card 1</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
+            <div class="portfolio-carousel">
+                <div class="owl-portfolio owl-carousel owl-theme">
+                    <div class="card card_1">
+                        <h3 class="title-portfolio">Card 1</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <h3 class="title-portfolio">Card 2</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
+                    <div class="card card_2">
+                        <h3 class="title-portfolio">Card 2</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <h3 class="title-portfolio">Card 3</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
+                    <div class="card card_3">
+                        <h3 class="title-portfolio">Card 3</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <h3 class="title-portfolio">Card 4</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
+                    <div class="card card_4">
+                        <h3 class="title-portfolio">Card 4</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_5">
+                        <h3 class="title-portfolio">Card 5</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_6">
+                        <h3 class="title-portfolio">Card 6</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_7">
+                        <h3 class="title-portfolio">Card 7</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_8">
+                        <h3 class="title-portfolio">Card 8</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_9">
+                        <h3 class="title-portfolio">Card 9</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_10">
+                        <h3 class="title-portfolio">Card 10</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_11">
+                        <h3 class="title-portfolio">Card 11</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_12">
+                        <h3 class="title-portfolio">Card 12</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                    <div class="card card_13">
+                        <h3 class="title-portfolio">Card 13</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <div class="lorem">
         <!-- <div class="lorem__img"> -->
@@ -287,7 +357,7 @@
         <div class="brands">
             <div class="container brands__container">
                 <div class="brands__store ">
-                    <ul class="list__brands slideshow">
+                    <ul class="owl-brands owl-carousel owl-theme list__brands slideshow">
                         <li><a><i class="fab fa-html5"></i></a></li>
                         <li><a><i class="fab fa-css3-alt"></i></a></li>
                         <li><a><i class="fab fa-php"></i></a></li>
@@ -469,21 +539,23 @@
                             <div class="modal-body">
                                 <form class="form_s center-block" id="form-site" name="contact-form">
                                     <div class="form-group">
-                                        <input type="text" name="name" class="form-control inputlogin" required="required"
-                                            placeholder="Name">
+                                        <input type="text" name="name" class="form-control inputlogin"
+                                            required="required" placeholder="Name">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="email" class="form-control inputlogin" required="required"
-                                            placeholder="E-mail">
+                                        <input type="text" name="email" class="form-control inputlogin"
+                                            required="required" placeholder="E-mail">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="phone" class="form-control inputlogin" required="required"
-                                            placeholder="Phone">
+                                        <input type="text" name="phone" class="form-control inputlogin"
+                                            required="required" placeholder="Phone">
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="proposition" id="contact-form-textarea" class="form-control" placeholder="Leave Your Message Here" cols="30" rows="10"></textarea>
+                                        <textarea name="proposition" id="contact-form-textarea" class="form-control"
+                                            placeholder="Leave Your Message Here" cols="30" rows="10"></textarea>
                                     </div>
-                                    <button id="btnClosePopup" type="submit" class="btn btn-primary btn-block sendbtn">Send a
+                                    <button id="btnClosePopup" type="submit"
+                                        class="btn btn-primary btn-block sendbtn">Send a
                                         request</button>
                                 </form>
                             </div>
@@ -509,11 +581,8 @@
     <script src="js/main.min.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js"></script>
-    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particlesjs@2.2.3/dist/particles.min.js"></script>
-    <script type="text/javascript" src="https://www.jsdelivr.com/package/npm/particles.js"></script>
-    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- correct sourse -->
+    <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
     <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 </body>

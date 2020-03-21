@@ -6,7 +6,9 @@
   "dependencies": {
     "bower": "^1.8.8",
     "express": "^4.17.1",
-    "particlesjs": "^2.2.3"
+    "owl.carousel": "^2.3.4",
+    "particlesjs": "^2.2.3",
+    "save": "^2.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
