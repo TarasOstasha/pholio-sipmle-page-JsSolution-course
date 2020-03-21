@@ -39,7 +39,7 @@ $(document).ready(function () {
         $('.owl-portfolio').owlCarousel({
             loop: true,
             margin: 10,
-            autoplay: true,
+            autoplay: false,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
             dots: false,
