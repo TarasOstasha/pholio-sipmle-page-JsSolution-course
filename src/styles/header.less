@@ -25,6 +25,7 @@ p {
 .header {
   position: relative;
 }
+
 //--header top settings--//
 .tittle__headerContainer {
   position: absolute;
@@ -103,10 +104,13 @@ h1 {
   height: 100px;
 }
 .navbar__menuHeader {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //display: inline-block;
   height: 100%;
-  width: 80%;
-  text-align: right;
+  //width: 80%;
+  //text-align: right;
 }
 .nav__icons {
   display: inline-block;
@@ -157,18 +161,17 @@ h1 {
   width: 20%;
   float: left;
 }
+//   logo
+.logo-svg {
+  width: 90px;
+  height: 90px;
+}
 .logo > img {
-  width: 60px;
+  //width: 60px;
+  width: 2em;
 }
 .logo {
-  transition: ease-out 1s;
-  font-size: 55px!important;
-  &:hover {
-    text-decoration: none;
-    color: darken(#ffffff, 30%);
-
-  }
-  .logo__Fonts();
+cursor: pointer;
 }
 
 a.back-to-top {
